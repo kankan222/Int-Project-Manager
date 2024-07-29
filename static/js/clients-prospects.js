@@ -107,7 +107,7 @@ function addClientPayment(){
     mainPopup.classList.remove(`hide`);
     mainPopup.innerHTML='';
     const childPopup = `<div class="add-collection blur">
-                    <div class="form">
+                        <div class="form">
                         <h2>Add Client Payment</h2>
                         <button type="button" class="btn-warning close" onclick="closemainPopup()">Close</button>
                         <hr>
@@ -130,7 +130,7 @@ function addClientPayment(){
                                     </div>
                                     <div class="flex">
                                         <input type="radio" name="mode" id="">
-                                        <p class="text">Online</p>
+                                        <p class="text">UPI</p>
                                     </div>
                                     <div class="flex">
                                         <input type="radio" name="mode" id="">
@@ -182,7 +182,7 @@ function editClientPayment(){
                                     </div>
                                     <div class="flex">
                                         <input type="radio" name="mode" id="">
-                                        <p class="text">Online</p>
+                                        <p class="text">UPI</p>
                                     </div>
                                     <div class="flex">
                                         <input type="radio" name="mode" id="">
@@ -235,7 +235,7 @@ function addClientExpense(){
                                     </div>
                                     <div class="flex">
                                         <input type="radio" name="mode" id="">
-                                        <p class="text">Online</p>
+                                        <p class="text">UPI</p>
                                     </div>
                                     <div class="flex">
                                         <input type="radio" name="mode" id="">
@@ -294,7 +294,7 @@ function editClientExpense(){
                                     </div>
                                     <div class="flex">
                                         <input type="radio" name="mode" id="">
-                                        <p class="text">Online</p>
+                                        <p class="text">UPI</p>
                                     </div>
                                     <div class="flex">
                                         <input type="radio" name="mode" id="">

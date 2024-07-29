@@ -8,7 +8,6 @@
 
     <!-- CSS  -->
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/projects/p-dashboard.css">
 </head>
 
 <body>
@@ -24,7 +23,7 @@
                     <header>
                         <div class="header-text">
                             <h1 id="main-heading">Vendors</h1>
-                            <p class="title">Find all <span id="main-title">Vendors</span> details here</p>
+                            <p class="title">Find all <span id="main-title">vendor</span> details here</p>
                         </div>
                         <div class="header-btn">
                             <button class="btn-primary flex" type="button" onclick="addVendorsSuppliers()">
@@ -215,6 +214,7 @@
                                             <th class="">Mode</th>
                                             <th class="">Remarks</th>
                                             <th class="">Action</th>
+                                            <th class=""></th>
                                         </tr>
                                     </thead>
 
@@ -240,12 +240,20 @@
                                                     </path>
                                                 </svg>
                                             </td>
+                                            <td>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="view-all"
+                                                    onclick="openInventory()">
+                                                    <path fill=""
+                                                        d="M12,7a2,2,0,1,0-2-2A2,2,0,0,0,12,7Zm0,10a2,2,0,1,0,2,2A2,2,0,0,0,12,17Zm0-7a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z">
+                                                    </path>
+                                                </svg>
+                                            </td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th colspan="6">Total</th>
-                                            <th colspan="1">&#8377; <span>50,000</span></th>
+                                            <th colspan="2">&#8377; <span>50,000</span></th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -325,6 +333,7 @@
 
                 <div class="main-popup hide"></div>
                 <div class="section-popup hide"></div>
+                <%- include ('../partials/alert.ejs') %>
             </div>
     </section>
 

@@ -139,6 +139,7 @@ button{
     border-radius: var(--radius-6);
     transition: var(--transition-1);
     font-weight: 500;
+    z-index: 50;
 }
 h1,
 h2,
@@ -161,6 +162,10 @@ hr {
     margin-bottom: 20px;
 }
 
+input:is([type="checkbox"], [type="radio"]){
+    accent-color: var(--color-900);
+    color: var(--color-100);
+}
 .uppercase {
     text-transform: uppercase;
 }
@@ -204,10 +209,13 @@ hr {
 }
 
 .hide{
-    display: none;
+    display: none !important;
 }
 .block{
     display: block;
+}
+.opacity-0{
+    opacity: 0;
 }
 section {
     width: 100%;
@@ -247,7 +255,7 @@ nav .nav-list li {
     font-weight: 500;
     padding: 12px 8px;
     border-radius: var(--radius-6);
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 nav .nav-list:not(.sub-menu) li a {
@@ -377,6 +385,7 @@ main {
 
 main h1 {
     font-size: var(--f-size-18);
+    color: var(--color-900);
     margin-bottom: 15px;
 }
 
@@ -803,7 +812,7 @@ main .sub-task{
     min-height: 100vh;
     border: 1px solid var(--color-100);
 }
-.section-popup .notification-popup{
+.section-popup :is(.notification-popup, .addItem-popup){
     width: 100%;
     height: 100%;
     max-width: 450px;
@@ -842,4 +851,98 @@ main .sub-task{
 }
 .notification-popup .notification-alert.active{
     background: var(--color-100);
+}
+
+.inventory-popup h2{
+    font-size: var(--f-size-18);
+    color: var(--color-900);
+}
+.inventory-popup, .addItem-popup{
+    width: 100%;
+    height: 100%;
+    max-width: 650px !important;
+    padding: 10px;
+    /* margin: 30px auto; */
+    position: absolute;
+    right: 0;
+    border-radius: var(--radius-5);
+    background: var(--color-20);
+    border: 1px solid var(--color-200);
+    z-index: 10;
+}
+.btn-dashed{
+    width: 100%;
+    margin: 10px auto;
+    padding: 8px;
+    background: var(--color-100);
+    color: var(--color-900);
+    border: 1px dashed var(--color-500);
+    gap: 5px;
+    font-size: var(--f-size-15);
+}
+.btn-dashed:hover {
+    background: var(--color-200);
+    border: 1px dashed var(--color-20);
+}
+
+.btn-dashed svg {
+    fill: var(--color-900);
+    width: 20px;
+    height: 20px;
+}
+.field .btn-dashed{
+    margin: 0;
+}
+.itemGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 2rem;
+    gap: 10px;
+    margin: 15px auto;
+}
+.field #trash-alt{
+    width: 30px;
+    height: 35px;
+    background: var(--color-warning-100);
+    fill: var(--color-warning-500);
+    border: 1px solid var(--color-warning-200);
+    border-radius: var(--radius-5);
+}
+.field #trash-alt:hover{
+    border: 1px dashed var(--color-warning-500);
+}
+
+
+
+/* Alert Box */
+.alert-popup{
+    position: absolute;
+    box-shadow: var(--b-shadow-1);
+    right: 2%;
+    top: -25%;
+    max-width: 300px;
+    word-break: normal;
+    padding: 20px 15px;
+    z-index: 99;
+    background: var(--color-20);
+    border-radius: var(--radius-5);
+    transition: var(--transition-1);
+}
+:is(.success-alert, .warning-alert).active{
+    top: 5%;
+}
+.alert-popup span.alertText{
+    font-weight: 500;
+}
+.alert-popup svg{
+    width: 40px;
+    height: 35px;
+    border-radius: var(--radius-circle);
+}
+.success-alert svg{
+    border: 3px solid var(--color-success-500);
+    fill: var(--color-success-500);
+}
+.warning-alert svg{
+    border: 3px solid var(--color-warning-500);
+    fill: var(--color-warning-500);
 }
