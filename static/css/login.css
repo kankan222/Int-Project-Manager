@@ -41,7 +41,7 @@
 
 *::selection {
     background: var(--color-950);
-    color: var(--color-20);
+    color: var(--color-100);
 }
 
 body,
@@ -84,6 +84,7 @@ h2{
     text-align: center;
     display: block;
     width: 100%;
+    color: var(--color-900);
 }
 form{
     margin-top: 2.5rem;
@@ -106,6 +107,7 @@ form{
 }
 .field label{
     font-size: 14px;
+    color: var(--color-900);
 }
 button{
     display: block;

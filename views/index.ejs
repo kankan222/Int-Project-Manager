@@ -28,7 +28,7 @@
                             <p class="title">Find all project details here</p>
                         </div>
                         <div class="header-btn">
-                            <button class="btn-primary flex" type="button" onclick="addProject()">
+                            <button class="btn-primary" type="button" onclick="addProject()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus-circle" class="">
                                     <path fill=""
                                         d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Zm4-9H13V8a1,1,0,0,0-2,0v3H8a1,1,0,0,0,0,2h3v3a1,1,0,0,0,2,0V13h3a1,1,0,0,0,0-2Z">
@@ -72,7 +72,7 @@
                                 <button type="button" class="btn-filter">Interior</button>
                                 <button type="button" class="btn-filter">Exterior</button>
                             </div>
-                            <div class="search flex">
+                            <div class="search flex align-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="search-icon"
                                     class="svg-secondary">
                                     <path
@@ -171,7 +171,7 @@
                                     d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z">
                                 </path>
                             </svg>
-                            <button class="btn-primary flex" type="button" onclick="editProject()">
+                            <button class="btn-primary" type="button" onclick="editProject(this)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="">
                                     <path fill=""
                                         d="M21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4h6a1,1,0,0,0,0-2H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12ZM6,12.76V17a1,1,0,0,0,1,1h4.24a1,1,0,0,0,.71-.29l6.92-6.93h0L21.71,8a1,1,0,0,0,0-1.42L17.47,2.29a1,1,0,0,0-1.42,0L13.23,5.12h0L6.29,12.05A1,1,0,0,0,6,12.76ZM16.76,4.41l2.83,2.83L18.17,8.66,15.34,5.83ZM8,13.17l5.93-5.93,2.83,2.83L10.83,16H8Z">
@@ -186,27 +186,27 @@
                         </div>
                         <!-- DETAILS  -->
                         <div class="contents">
-                            <div class="description flex">
+                            <div class="description flex align-center">
                                 <h2>Client Name:</h2>
                                 <p class="text">Kankan Jyoti Nath</p>
                             </div>
-                            <div class="description flex">
+                            <div class="description flex align-center">
                                 <h2>Phone / Alternate Number:</h2>
                                 <p class="text">6002649802 / 7636896075</p>
                             </div>
-                            <div class="description flex">
+                            <div class="description flex align-center">
                                 <h2>Email ID:</h2>
                                 <p class="text">jyotikankan222@gmail.com</p>
                             </div>
-                            <div class="description flex">
+                            <div class="description flex align-center">
                                 <h2>Address:</h2>
                                 <p class="text">House No. 60, Ashram Road, Lachitnagar, Guwahati, Assam</p>
                             </div>
-                            <div class="description flex">
+                            <div class="description flex align-center">
                                 <h2>Deadline:</h2>
                                 <p class="text">12 June 2024</p>
                             </div>
-                            <div class="description flex">
+                            <div class="description flex align-center">
                                 <h2>Tags:</h2>
                                 <p class="type">Interior</p>
                                 <p class="type">Execution</p>
@@ -215,17 +215,17 @@
 
                         <hr>
                         <!-- EMPLOYEE LIST -->
-                        <div class="p-employees">
+                        <div class="p-employees flex align-center">
                             <h2>Assignees:</h2>
 
                             <div class="employee-container flex">
-                                <div class="e-profile flex">
+                                <div class="e-profile flex align-center">
                                     <img src="/img/admin.jpg" alt="profile" loading="lazy">
                                     <p class="text">Mohibul Hoque</p>
                                 </div>
                             </div>
 
-                            <div class="action-btn flex">
+                            <div class="action-btn flex align-center">
                                 <button class="btn-secondary" type="button" onclick="addEmployee()">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus-circle"
                                         class="">
@@ -247,7 +247,7 @@
                         </div>
 
                         <!-- STATUS -->
-                        <div class="project-status flex">
+                        <div class="project-status flex align-center">
                             <h2>Status:</h2>
                             <div class="inputs flex">
                                 <div class="checkbox flex warning">
@@ -268,7 +268,7 @@
                         <hr>
 
                         <!-- SUB-TASKS  -->
-                        <div class="sub-task flex">
+                        <div class="sub-task flex align-center">
                             <h2>Sub Tasks:</h2>
                             <div class="p-sub-tasks flex">
                                 <p class="text task">Plumbing</p>

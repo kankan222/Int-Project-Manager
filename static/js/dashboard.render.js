@@ -26,7 +26,7 @@ function addProject(){
             </div>
             <div class="field add-field-btn">
                 <p class="block">0</p>
-                <button class="btn-primary flex j-center" type="button" onclick="addNewClient()">
+                <button class="btn-primary j-center" type="button" onclick="addNewClient(this)">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus-circle" class="">
                         <path fill=""
                             d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Zm4-9H13V8a1,1,0,0,0-2,0v3H8a1,1,0,0,0,0,2h3v3a1,1,0,0,0,2,0V13h3a1,1,0,0,0,0-2Z">
@@ -114,6 +114,8 @@ function addProject(){
 function addNewClient(){
     document.querySelector(`.newField`).classList.remove(`hide`);
 }
+
+
 //EDIT PROJECT
 function editProject(){
     const mainPopup = document.querySelector(`.main-popup`);
@@ -168,25 +170,25 @@ function addEmployee(){
                         <button type="button" class="btn-warning close" onclick="closemainPopup()">Close</button>
                         <hr>
 
-                        <div class="addFlex flex">
-                            <div class="field flex">
+                        <div class="addFlex flex align-center">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Manushree Gogoi</p>
                             </div>
-                            <div class="field flex">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Manushree Gogoi</p>
                             </div>
-                            <div class="field flex">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Manushree Gogoi</p>
                             </div>
                         </div>
                         <hr>
-                        <div class="field flex addempl">
-                            <input type="text" placeholder="Add an Employee">
+                        <div class="field flex addempl align-center">
+                            <input type="text" placeholder="Add Project Employee">
                             <input type="text" placeholder="Designation">
-                            <button class="btn-primary flex" type="button">
+                            <button class="btn-primary" type="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus-circle" class="">
                                     <path fill=""
                                         d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Zm4-9H13V8a1,1,0,0,0-2,0v3H8a1,1,0,0,0,0,2h3v3a1,1,0,0,0,2,0V13h3a1,1,0,0,0,0-2Z">
@@ -216,16 +218,16 @@ function removeEmployee(){
                         <button type="button" class="btn-warning close" onclick="closemainPopup()">Close</button>
                         <hr>
 
-                        <div class="addFlex flex">
-                            <div class="field flex">
+                        <div class="addFlex flex align-center">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Manushree Gogoi</p>
                             </div>
-                            <div class="field flex">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Manushree Gogoi</p>
                             </div>
-                            <div class="field flex">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Manushree Gogoi</p>
                             </div>
@@ -252,12 +254,12 @@ function addSubTask(){
                         <button type="button" class="btn-warning close" onclick="closemainPopup()">Close</button>
                         <hr>
 
-                        <div class="addFlex flex">
-                            <div class="field flex">
+                        <div class="addFlex flex align-center">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Plumbing</p>
                             </div>
-                            <div class="field flex">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Electricity</p>
                             </div>
@@ -284,12 +286,12 @@ function removeSubTask(){
                         <button type="button" class="btn-warning close" onclick="closemainPopup()">Close</button>
                         <hr>
 
-                        <div class="addFlex flex">
-                            <div class="field flex">
+                        <div class="addFlex flex align-center">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Plumbing</p>
                             </div>
-                            <div class="field flex">
+                            <div class="field flex align-center">
                                 <input type="checkbox" name="" id="">
                                 <p class="text">Electricity</p>
                             </div>

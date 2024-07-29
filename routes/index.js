@@ -26,6 +26,15 @@ router.get('/payments', function(req, res, next) {
   res.render('./admin/payments', { title: 'Express' });
 });
 
+// Get Users
+router.get('/users', function(req, res, next) {
+  res.render('./admin/user', { title: 'Express' });
+});
+// Get Settings
+router.get('/settings', function(req, res, next) {
+  res.render('./admin/settings', { title: 'Express' });
+});
+
 
 
 // Get Payments/Expenses
