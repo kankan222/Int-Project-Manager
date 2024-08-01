@@ -762,8 +762,13 @@ main .sub-task{
     border: 1px solid var(--color-200);
     background: var(--color-100);
 }
-.field .block{
-    opacity: 0;
+.field.error input{
+    border: 1px solid var(--color-warning-500);
+    background: var(--color-warning-50);
+}
+.field span.err{
+    font-size: 12px;
+    color: var(--color-warning-500);
 }
 .addGrid{
     display: grid;

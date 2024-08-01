@@ -54,7 +54,7 @@ function addPurchase(){
                             </div>
                             <div class="field">
                                 <p class="title opacity-0">hu</p>
-                                <button class="btn-dashed flex align-items j-center" type="button" onclick="addInventoryItem(this)">
+                                <button class="btn-dashed flex align-items j-center" type="button" onclick="addOneItem(this)">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus-circle"
                                         class="">
                                         <path fill=""
@@ -68,19 +68,19 @@ function addPurchase(){
                         <div class="newItem">
                             <div class="itemGrid">
                                 <div class="field">
-                                    <p class="title">Item</p>
+                                    <p class="title">Item<span>(*optional)</span></p>
                                     <input type="text" name="" id="">
                                 </div>
                                 <div class="field">
-                                    <p class="title">Quantity</p>
+                                    <p class="title">Quantity<span>(*optional)</span></p>
                                     <input type="text" name="" id="">
                                 </div>
                                 <div class="field">
-                                    <p class="title">Rate</p>
+                                    <p class="title">Rate<span>(*optional)</span></p>
                                     <input type="number" name="" id="">
                                 </div>
                                 <div class="field">
-                                    <p class="title">Amount</p>
+                                    <p class="title">Amount<span>(*optional)</span></p>
                                     <input type="number" name="" id="">
                                 </div>
                                 <div class="field">

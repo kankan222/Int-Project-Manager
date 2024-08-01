@@ -25,7 +25,7 @@ function addProject(){
                 </select>
             </div>
             <div class="field add-field-btn">
-                <p class="block">0</p>
+                <p class="opacity-0">0</p>
                 <button class="btn-primary j-center" type="button" onclick="addNewClient(this)">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus-circle" class="">
                         <path fill=""
@@ -305,3 +305,26 @@ function removeSubTask(){
                 </div>`
         mainPopup.innerHTML = childPopup;
 }
+
+
+
+
+function validateInput(){
+    const field = document.querySelectorAll(`.field`);
+
+    field.forEach(val =>{
+        const input = val.querySelector(`input`);
+        const errMsg = val.querySelector(`span.err`);
+
+        if(input.hasAttribute(`required`) && input.value.trim() === ''){
+            errMsg.classList.remove(`hide`);
+            field.classList.add(`error`);
+        }else{
+            errMsg.classList.add(`hide`);
+            field.classList.remove(`error`);
+        }
+    })
+}
+
+
+validateInput();

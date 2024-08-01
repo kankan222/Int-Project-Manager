@@ -21,10 +21,12 @@ function addClientsProspects(){
                             <div class="field">
                                 <p class="title">Name</p>
                                 <input type="text" name="" id="" required>
+                                <span class="err hide">Field cannot be empty</span>
                             </div>
                             <div class="field">
                                 <p class="title">Contact Number</p>
                                 <input type="number" name="" id="" required>
+                                <span class="err hide">Field cannot be empty</span>
                             </div>
                             <div class="field">
                                 <p class="title">Alternate Number<span>(*optional)</span></p>
@@ -67,10 +69,12 @@ function editClientsProspects(){
                             <div class="field">
                                 <p class="title">Name</p>
                                 <input type="text" name="" id="" required>
+                                <span class="err hide">Field cannot be empty</span>
                             </div>
                             <div class="field">
                                 <p class="title">Contact Number</p>
                                 <input type="number" name="" id="" required>
+                                <span class="err hide">Field cannot be empty</span>
                             </div>
                             <div class="field">
                                 <p class="title">Alternate Number<span>(*optional)</span></p>

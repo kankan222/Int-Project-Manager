@@ -127,8 +127,6 @@ function hideNotificationPopup(event){
     document.querySelector(`.section-popup`).classList.add('hide');
 }
 
-
-
 function successAlert(){
     document.querySelector(`.success-alert`).classList.toggle('active');
     document.querySelector(`.alertText`).textContent = `Project is inserted successfully`;
@@ -137,3 +135,6 @@ function successAlert(){
 function warningAlert(){
     document.querySelector(`.warning-alert`).classList.toggle('active');
 }
+
+
+
