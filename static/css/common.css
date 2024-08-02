@@ -13,19 +13,17 @@
     --color-900: hsl(20, 44%, 26%);
     --color-950: hsl(18, 50%, 14%);
 
-    --color-20: hsl(0, 0%, 98%);
-    --color-100: hsl(0, 0%, 94%);
-    /* Border-Color */
+     --color-20: hsl(0, 0%, 98%);
+    /* --color-100: hsl(0, 0%, 94%);
     --color-200: #dcdcdc;
     --color-300: #bdbdbd;
     --color-400: #989898;
     --color-500: #7c7c7c;
-    /* Text-Color */
     --color-600: #656565;
     --color-700: #525252;
     --color-800: #464646;
     --color-900: #3d3d3d;
-    --color-950: #292929;
+    --color-950: #292929; */
 
 
     --color-success-50: hsl(120, 41%, 97%);
@@ -69,6 +67,7 @@
     --b-shadow-1: hsla(18, 50%, 14%, 0.2) 0px 1px 4px;
 
     --transition-1: all 300ms ease;
+    --transition-2: all 300ms ease-in-out;
 }
 
 @font-face {
@@ -107,9 +106,11 @@ body {
 
 *::selection {
     background: var(--color-950);
-    color: var(--color-20);
+    color: var(--color-50);
 }
-
+::-webkit-scrollbar{
+    width: 5px;
+}
 a {
     text-decoration: none;
 }
@@ -173,7 +174,7 @@ input:is([type="checkbox"], [type="radio"]){
 .icon {
     width: 22px;
     height: 22px;
-    fill: var(--color-700);
+    fill: var(--color-950);
 }
 
 .flex {
@@ -201,6 +202,9 @@ input:is([type="checkbox"], [type="radio"]){
 }
 .j-end{
     justify-content: end;
+}
+.flex-column{
+    flex-direction: column;
 }
 .title {
     font-size: var(--f-size-14);
@@ -231,12 +235,12 @@ section {
     padding: 10px 15px;
     padding-right: 20px;
     border-right: 1px solid var(--color-100);
-    background: var(--color-20);
+    background: var(--color-50);
     z-index: 50;
 }
 
 .logo {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .logo img {
@@ -249,55 +253,58 @@ section {
 .logo h3 {
     font-size: var(--f-size-16);
 }
+nav{
+    position: relative;
+    overflow-x: scroll;
+    height: 90vh;
+}
+nav ul li {
+    margin-bottom: 5px;
+}
 
-nav .nav-list li {
+nav .nav-list li > a {
     font-weight: 500;
     padding: 12px 8px;
     border-radius: var(--radius-6);
-    /* margin-top: 10px; */
-}
-
-nav .nav-list:not(.sub-menu) li a {
     font-size: var(--f-size-15);
-    color: var(--color-500);
+    color: var(--color-950);
     overflow: hidden;
 }
 
-nav .nav-list li a span.text {
+nav ul li a span.text {
     flex: 1;
 }
 
-nav .nav-list li.active {
-    /* border: 1px solid var(--color-200); */
+nav .nav-list :is(li.active, li:hover) a {
     background: var(--color-100);
-}
-
-nav .nav-list li a.active {
-    color: var(--color-950);
-    
+    color: var(--color-500);   
 }
 nav li a .arrow.active{
     transform: rotate(90deg);
 }
-nav .nav-list li.active svg {
-    fill: var(--color-950);
+nav .nav-list :is(li.active, li:hover) svg {
+    fill: var(--color-500);
 }
-nav .sub-menu{
+li .sub-menu{
     display: none;
+    /* margin: 5px; */
 }
-nav .sub-menu.active{
+li .sub-menu.active{
     display: block;
 }
-nav .sub-menu li{
-    margin-left: 46px;
-    padding: 5px;
-    margin-top: 5px;
-    list-style-type: circle;
-}
-nav .sub-menu li a{
-    font-size: var(--f-size-14) !important;
+li .sub-menu p{
+    font-weight: 500;
+    margin: 5px 0 5px;
+    margin-left: 40px;
+    padding: 10px;
+    font-size: var(--f-size-14);
 }
 
+li .sub-menu.active p.active{
+    border-left: 1px solid var(--color-200);
+    background: var(--color-100);
+    color: var(--color-500);  
+}
 #notification-count{
     font-size: var(--f-size-12);
     border-radius: var(--radius-circle);
@@ -322,20 +329,22 @@ nav .sub-menu li a{
 /* --RIGHT SIDE--  */
 
 .btn-primary {
-    padding: 10px;
+    padding: 8px 10px;
     background: var(--color-900);
-    color: var(--color-20);
+    color: var(--color-50);
     gap: 5px;
     display: flex;
     align-items: center;
+    border: 1px solid var(--color-900);
 }
 
 .btn-primary:hover {
     background: var(--color-600);
+    border: 1px dashed var(--color-200);
 }
 
 .btn-primary svg {
-    fill: var(--color-20);
+    fill: var(--color-50);
     width: 20px;
     height: 20px;
 }
@@ -405,13 +414,13 @@ main .features {
 }
 
 .btn-filter {
-    padding: 7px 10px;
+    padding: 8px 10px;
     color: var(--color-500);
     border-radius: var(--radius-5);
 }
 
 .btn-filter.active {
-    background: var(--color-20);
+    background: var(--color-50);
     color: var(--color-950);
     font-weight: 500;
     border: 1px solid var(--color-200);
@@ -423,7 +432,7 @@ main .features {
     overflow: hidden;
     border-radius: var(--radius-5);
     border: 1px dashed var(--color-200);
-    background: var(--color-20);
+    background: var(--color-50);
     padding-left: 10px;
 }
 
@@ -576,8 +585,8 @@ main p.text {
     font-weight: 600;
 }
 .btn-secondary{
-    padding: 5px 8px;
-    background: var(--color-20);
+    padding: 8px 10px;
+    background: var(--color-50);
     color: var(--color-950);
     border: 1px solid var(--color-200);
 }
@@ -591,7 +600,7 @@ main p.text {
 
 }
 .btn-warning{
-    padding: 5px 8px;
+    padding: 8px 10px;
     background: var(--color-warning-100);
     color: var(--color-warning-500);
     border: 1px solid var(--color-warning-200);
@@ -605,7 +614,7 @@ main p.text {
     height: 18px;
 }
 .btn-success{
-    padding: 5px 8px;
+    padding: 8px 10px;
     background: var(--color-success-100);
     color: var(--color-success-500);
     border: 1px solid var(--color-success-200);
@@ -705,7 +714,7 @@ main .sub-task{
     margin: 30px auto;
     border-radius: var(--radius-5);
     padding: 20px 15px;
-    background: var(--color-20);
+    background: var(--color-50);
     border: 1px solid var(--color-200);
 }
 .main-popup .form{
@@ -777,10 +786,8 @@ main .sub-task{
     margin: 15px auto;
 }
 .form .action-btn button{
-    flex-grow: 1;
     width: 50%;
     text-align: center;
-    padding: 10px;
     display: block;
     font-size: var(--f-size-15);
 }
@@ -827,7 +834,7 @@ main .sub-task{
     position: absolute;
     right: 0;
     border-radius: var(--radius-5);
-    background: var(--color-20);
+    background: var(--color-50);
     border: 1px solid var(--color-200);
     z-index: 10;
 }
@@ -841,7 +848,7 @@ main .sub-task{
     border-right: 1px solid var(--color-200);
 }
 .notification-popup .action-btn button{
-    padding: 6px 10px;
+    padding: 8px 10px;
     font-size: var(--f-size-13);
 }
 .notification-popup button.close{
@@ -873,7 +880,7 @@ main .sub-task{
     position: absolute;
     right: 0;
     border-radius: var(--radius-5);
-    background: var(--color-20);
+    background: var(--color-50);
     border: 1px solid var(--color-200);
     z-index: 10;
 }
@@ -889,7 +896,7 @@ main .sub-task{
 }
 .btn-dashed:hover {
     background: var(--color-200);
-    border: 1px dashed var(--color-20);
+    border: 1px dashed var(--color-50);
 }
 
 .btn-dashed svg {
@@ -925,16 +932,16 @@ main .sub-task{
     position: absolute;
     box-shadow: var(--b-shadow-1);
     right: 2%;
-    top: -50%;
+    top: -75%;
     max-width: 300px;
     word-break: normal;
     padding: 20px 15px;
     z-index: 99;
-    background: var(--color-20);
+    background: var(--color-50);
     border-radius: var(--radius-5);
-    transition: var(--transition-1);
+    transition: var(--transition-2);
 }
-:is(.success-alert, .warning-alert).active{
+:is(.success-alert, .warning-alert, .confirm-alert, .error-alert).active{
     top: 5%;
 }
 .alert-popup span.alertText{
@@ -953,6 +960,20 @@ main .sub-task{
     border: 3px solid var(--color-warning-500);
     fill: var(--color-warning-500);
 }
+.alert-btns{
+    width: 100%;
+}
+.alert-btns button{
+    flex: 1;
+}
+:is(.confirm-alert, .error-alert) svg{
+    width: 35% !important;
+    height: auto !important;
+    fill: var(--color-warning-500);
+}
+
+/* SETTINGS */
+
 
 .set-details .field input{
     width: 250px;
@@ -975,7 +996,7 @@ main .sub-task{
 .set-title span{
     border: 1px solid var(--color-200);
     border-radius: var(--radius-circle);
-    background: var(--color-20);
+    background: var(--color-50);
     width: 25px;
     height: 25px;
 }
